@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Data Directory
+amex-default-prediction/
+
+# Local gitignore file
+gitignore
+git_commit.sh
+
+# Other local files
+.Rprofile
+.bash_history
+.jupyter/
+.kaggle/
+.local/
+.ssh/
