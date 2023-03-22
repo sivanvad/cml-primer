@@ -142,3 +142,6 @@ git_commit.sh
 .kaggle/
 .local/
 .ssh/
+
+#Cred
+.aws/
