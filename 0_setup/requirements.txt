@@ -1,1 +1,5 @@
 kaggle
+numpy
+pandas
+fsspec
+s3fs
