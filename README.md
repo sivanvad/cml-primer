@@ -1,5 +1,3 @@
-# Amex Default Prediction
+# CML Demo
 
-## Setup
-1. Setup Kaggle credentials to download data
-2. Setup AWS credentials to load and read data from S3
+Phase 1 completed and available in branch v0.1
