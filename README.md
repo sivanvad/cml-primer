@@ -17,7 +17,7 @@ Stages in ML Lifecycle can be categorised into 3 groups:
 * Data Science
 * Machine Learning Operations (MLOps)
 
-<img src="./docs/ml_lifecycle_vanilla.png" width="625" height="1250">
+<img src="./docs/ml_lifecycle_vanilla.png" width="1250" height="625">
 
 ### Setting up CML Project (From Git)
 
