@@ -1,5 +1,3 @@
-# CML Demo for Professional Services
-
 ## Introduction
 
 Cloudera Machine Learning (CML) makes it easy to bring Data Scientists to the data platform and makes it easier to overcome the challenges they face on a day to day basis. To understand more about CML, please view this [tour](https://www.cloudera.com/users/cdp-tour-cml-intro.html).
