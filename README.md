@@ -2,60 +2,58 @@
 
 ## Introduction
 
-Cloudera Machine Learning (CML) makes it easy to bring Data Scientists to the data platform and makes it easier to overcome the challenges they face on a day to day basis. To understand more about CML, please view this [tour](https://www.cloudera.com/users/cdp-tour-cml-intro.html).
+Cloudera Machine Learning (CML) makes it easy to bring Data Scientists to the data platform and makes it easier to overcome the challenges they face on a day to day basis. Since industry standards are still evolving, there are new solutions required to fit new use cases. This repository is an effort to document solutions to common problems faced during implementation and utilisation of CML. By doing so, anyone with access to this repository can find solutions faster than they would do otherwise.
 
-### About this demo
-
-In a typical working day of a data scientist, tackling the business problems requires them going through various stages of machine learning lifecycle. CML plays an important role in simplifying many of the activities in this lifecycle. Depending on the type of user and their requirements, role of CML can vary while supporting complete lifecycle. This demo intends to cover the most common scenarios faced of typical CML user. Intention is to help the audience understand CML capabilities by documenting the journey of a CML user.
-
-It is important to note that this demo does not cover all capabilities of CML. To know all about CML, please refer [documentation](https://docs.cloudera.com/machine-learning/cloud/product/topics/ml-product-overview.html).
+<div class="alert alert-block alert-info">
+<b>Note:</b> This is not an exhaustive document. There can be scenarios that may not be covered here. In such cases, reach out the ML SME group. Please refer to Cloudera documentation on product related information.
+</div>
 
 ## ML Lifecycle
 
-Stages in ML Lifecycle can be categorised into 3 groups:
+ML lifecycle, in high level, provides a basis of any ML project. Stages in ML Lifecycle can be categorised into 4 stages in general:
 * Data Engineering
 * Data Science
 * Machine Learning Operations (MLOps)
+* Consumption (Business Users)
 
-<img src="ml_lifecycle_vanilla.png" width="625" height="1250">
+<img src="docs/ml_lifecycle_vanilla.png" width="625" height="1250">
 
-### Setting up CML Project (From Git)
+Each stage involve different sets of users. In Phase 1, Data Science stage is focused as it forms the core of ML lifecycle.
+
+## CML Projects
+
+Before we begin with the ML lifecycle, you start by creating a CML project.
+
+As per Cloudera documentation, `"Projects form the heart of Cloudera Machine Learning. They hold all the code, configuration, and libraries needed to reproducibly run analyses. Each project is independent, ensuring users can work freely without interfering with one another or breaking existing workloads."`
+
+Users can create a blank project, use existing templates or source from git repository.
+
+### Create CML Project from git source
 
 1. Setup SSH for remote Github by following the steps from [here](https://docs.cloudera.com/machine-learning/cloud/security/topics/ml-adding-ssh-key-to-github.html).
-2. Initialise git 
-```git init```
+2. Create a CML project. Follow steps from [documentation](https://docs.cloudera.com/machine-learning/cloud/projects/topics/ml-creating-a-project-with-runtimes-c.html).
 
-3. Add remote origin to your git repo
-```git remote add origin <REPO_URL>```
+<div class="alert alert-block alert-info">
+<b>Optional:</b> You can also create a blank project and pull data from existing git repository.
+</div>
 
-4. Pull git repo
-```git pull```
+1. After creating blank project, start a session and navigate to 'Terminal Access'<br>
+2. Initialise git<br>
+`git init`<br>
+3. Add remote origin to your git repo<br>
+`git remote add origin <REPO_URL>`<br>
+4. Pull git repo from remote<br>
+`git pull`<br>
+5. Switch to existing branch<br>
+`git switch <BRANCH_NAME>`<br>
+6. \[Optional\] Create new branch<br>
+`git checkout -b <BRANCH_NAME>`<br>
 
-5. Switch to existing branch
-```git switch <BRANCH_NAME>```
+## Data Science stage
 
-6. \[Optional\] Create new branch
-```git checkout -b <BRANCH_NAME>```
+Data exploration, Feature Engineering, Baseline model, Model Training & Model evaluation form the key phases of Data Science stage. Data Scientists often spend time defining the problem and analysing the data before starting model building.
 
-
-### Data Engineering
-
-ML Project begins with defining the problem. Once a problem & goals have been defined, data scientists begin by collecting data from various sources. Cloudera Data Platform supports all data needs including ML projects. CML is integrated with other services in CDP and users can source data from there or access data directly from external sources. 
-
-After identifying data required for the project, data engineers are involved to source data where required to build data pipelines. This is usually performed outside of CML using Cloudera Data Flow (NiFi) or Cloudera Data Engineering (Spark). However, many times it is hard to determine what data is required for this project before hand. Data Scientists have to perform data exploration and work with data teams to identify data that add value to project. This means CML users should have means to access data that is required after acquiring appropriate permissions. SDX plays an important role in enabling this seamless integration between different data services in CDP. With permissions in place, CML users can access data residing in other data services like Cloudera Data Warehouse without relying on data engineers.
-
-**Data Access Patterns** <br>
----- Add notebook link here ----
-
-In this edition, data engineering is not included.
-
-## Data Science
-
-Data exploration, Feature Engineering, Baseline model, Model Training & Model evaluation form the key stages of Data Science phase. Data Scientists often spend time defining the problem and analysing the data before starting model training.
+Follow the below documents to go through each phase:
 
 [0. Setup](notebooks/Data_Science_Starter.ipynb)<br>
 [1. Baseline Model](notebooks/Baseline_Model.ipynb)
-
-### MLOps
-
-TODO
