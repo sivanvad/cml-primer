@@ -16,7 +16,7 @@ ML lifecycle, in high level, provides a basis of any ML project. Stages in ML Li
 * Machine Learning Operations (MLOps)
 * Consumption (Business Users)
 
-<img src="docs/ml_lifecycle_vanilla.png" width="625" height="1250">
+<img src="docs/ml_lifecycle_vanilla.png" width="1250" height="625">
 
 Each stage involve different sets of users. In Phase 1, Data Science stage is focused as it forms the core of ML lifecycle.
 
