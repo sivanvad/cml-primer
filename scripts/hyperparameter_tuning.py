@@ -1,16 +1,23 @@
+import sys
 import pandas as pd
+#import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
+
 import mlflow
 import mlflow.sklearn
 
-mlflow.set_experiment('uci_creditcard')
+# import hyperparams
+from hyperparams import parameters
+
+exp = sys.argv[1]
+
+mlflow.set_experiment(exp)
 mlflow.start_run()
-mlflow.sklearn.autolog()
 
 pd_df = pd.read_csv('/home/cdsw/data/UCI_Credit_Card.csv.zip', compression='zip')
 
@@ -84,16 +91,23 @@ clf = Pipeline(
     steps=[("preprocessor", preprocessor), ("classifier", rf_clf)]
 )
 
-parameters = {'classifier__n_estimators': [100, 200]}
+#parameters = {'classifier__n_estimators': [100, 150, 200, 250, 300], 'classifier__max_depth': list(range(1, 20, 5)), 
+#              'classifier__min_samples_split': np.arange(0.1, 1.0, 0.5), 'classifier__min_samples_leaf': np.arange(0.1, 0.5, 0.2)}
 
 optimizer = GridSearchCV(clf, parameters)
 
 model = optimizer.fit(X_train, y_train)
 
-train_score = model.score(X_train, y_train)
-test_score = model.score(X_test, y_test)
+best_score = model.best_score_
+best_estimator = model.best_estimator_
 
-mlflow.log_metric('train_score', train_score)
-mlflow.log_metric('test_score', test_score)
+rf_clf_params = best_estimator.steps[1][1].get_params()
+
+params_in = ['n_estimators', 'max_depth', 'min_samples_leaf', 'min_samples_split']
+
+for p in params_in:
+    mlflow.log_param(p, rf_clf_params[p])
+    
+mlflow.log_metric('best_score', best_score)
 
 mlflow.end_run()
