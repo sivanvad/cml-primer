@@ -1,4 +1,4 @@
-# CML Repo for Professional Services
+# CML Knowledge Repo for Professional Services
 
 ## Introduction
 
@@ -16,7 +16,7 @@ ML lifecycle, in high level, provides a basis of any ML project. Stages in ML Li
 * Machine Learning Operations (MLOps)
 * Consumption (Business Users)
 
-<img src="docs/ml_lifecycle_vanilla.png" width="1000" height="500">
+<img src="ml_lifecycle_vanilla.png" width="625" height="1250">
 
 Each stage involve different sets of users. In Phase 1, Data Science stage is focused as it forms the core of ML lifecycle.
 
@@ -91,5 +91,7 @@ Data exploration, Feature Engineering, Baseline model, Model Training & Model ev
 
 Follow the below documents to go through each phase:
 
-[0. Setup](notebooks/0_Setup.ipynb)<br>
-[1. Baseline Model](notebooks/1_Baseline_Model.ipynb)
+[0. Setup](../notebooks/0_Setup.ipynb)<br>
+[1. Baseline Model](../notebooks/1_Baseline_Model.ipynb)<br>
+[2. Custom ML Runtime](../notebooks/2_Custom_ML_Runtime.ipynb)<br>
+[3. Model Metrics](../notebooks/3_Model_Metrics.ipynb)
