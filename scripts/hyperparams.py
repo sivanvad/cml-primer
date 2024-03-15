@@ -9,5 +9,9 @@ import numpy as np
 #              'classifier__min_samples_split': np.arange(0.5, 0.9, 0.1), 'classifier__min_samples_leaf': np.arange(0.1, 0.2, 0.1)}
 
 # Run 4
-parameters = {'classifier__n_estimators': list(range(250,290,1)), 'classifier__max_depth': list(range(14, 19, 1)), 
-              'classifier__min_samples_split': np.arange(0.6, 1.0, 0.1), 'classifier__min_samples_leaf': [0.1]}
+#parameters = {'classifier__n_estimators': list(range(250,290,1)), 'classifier__max_depth': list(range(14, 19, 1)), 
+#              'classifier__min_samples_split': np.arange(0.6, 1.0, 0.1), 'classifier__min_samples_leaf': [0.1]}
+
+# Exp0 Run
+parameters = {'classifier__n_estimators': list(range(250,255,1)), 'classifier__max_depth': [14], 
+              'classifier__min_samples_split': [0.7], 'classifier__min_samples_leaf': [0.1]}
