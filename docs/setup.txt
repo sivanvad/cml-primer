@@ -1,0 +1,149 @@
+cdsw@1bu83ab6dlj8xhml:~$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .conda/
+        .pip/
+
+nothing added to commit but untracked files present (use "git add" to track)
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ git checkout v0.1
+Branch 'v0.1' set up to track remote branch 'v0.1' from 'origin'.
+Switched to a new branch 'v0.1'
+cdsw@1bu83ab6dlj8xhml:~$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+cdsw@1bu83ab6dlj8xhml:~$ git branch --delete v0.1
+warning: deleting branch 'v0.1' that has been merged to
+         'refs/remotes/origin/v0.1', but not yet merged to HEAD.
+Deleted branch v0.1 (was 757d3fa).
+cdsw@1bu83ab6dlj8xhml:~$ git remote add origin git@github.com:sivanvad/ml-projects.git
+fatal: remote origin already exists.
+cdsw@1bu83ab6dlj8xhml:~$ git remote show origin
+The authenticity of host 'github.com (140.82.112.4)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,140.82.112.4' (ECDSA) to the list of known hosts.
+* remote origin
+  Fetch URL: git@github.com:sivanvad/ml-projects.git
+  Push  URL: git@github.com:sivanvad/ml-projects.git
+  HEAD branch: main
+  Remote branches:
+    main tracked
+    v0.1 tracked
+  Local branch configured for 'git pull':
+    main merges with remote main
+  Local ref configured for 'git push':
+    main pushes to main (up to date)
+cdsw@1bu83ab6dlj8xhml:~$ git checkout -b v0.1
+Switched to a new branch 'v0.1'
+cdsw@1bu83ab6dlj8xhml:~$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+cdsw@1bu83ab6dlj8xhml:~$ git branch --delete v0.1
+Deleted branch v0.1 (was 708872e).
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ git remote add origin git@github.com:sivanvad/ml-projects.git
+fatal: remote origin already exists.
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ git remote show origin
+Warning: Permanently added the ECDSA host key for IP address '140.82.112.3' to the list of known hosts.
+* remote origin
+  Fetch URL: git@github.com:sivanvad/ml-projects.git
+  Push  URL: git@github.com:sivanvad/ml-projects.git
+  HEAD branch: main
+  Remote branches:
+    main tracked
+    v0.1 tracked
+  Local branch configured for 'git pull':
+    main merges with remote main
+  Local ref configured for 'git push':
+    main pushes to main (up to date)
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ git pull
+Already up to date.
+cdsw@1bu83ab6dlj8xhml:~$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .conda/
+        .pip/
+
+nothing added to commit but untracked files present (use "git add" to track)
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ git switch v0.1
+Branch 'v0.1' set up to track remote branch 'v0.1' from 'origin'.
+Switched to a new branch 'v0.1'
+cdsw@1bu83ab6dlj8xhml:~$ git pull
+Warning: Permanently added the ECDSA host key for IP address '140.82.113.3' to the list of known hosts.
+Already up to date.
+cdsw@1bu83ab6dlj8xhml:~$ git pull origin
+Warning: Permanently added the ECDSA host key for IP address '140.82.113.4' to the list of known hosts.
+Already up to date.
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ 
+cdsw@1bu83ab6dlj8xhml:~$ git status
+On branch v0.1
+Your branch is up to date with 'origin/v0.1'.
+
+nothing to commit, working tree clean
+cdsw@1bu83ab6dlj8xhml:~$ pwd
+/home/cdsw
+cdsw@1bu83ab6dlj8xhml:~$ cd docs
+cdsw@1bu83ab6dlj8xhml:~/docs$ ls -l
+total 32
+-rw-r--r-- 1 cdsw cdsw  3032 Jun 15 14:03 CML_Demo_Documentation.ipynb
+-rw-r--r-- 1 cdsw cdsw 25070 Jun 15 14:00 ml_lifecycle.png
+cdsw@1bu83ab6dlj8xhml:~/docs$ 
+cdsw@1bu83ab6dlj8xhml:~/docs$ cd ..
+cdsw@1bu83ab6dlj8xhml:~$ git status
+On branch v0.1
+Your branch is up to date with 'origin/v0.1'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        docs/
+
+nothing added to commit but untracked files present (use "git add" to track)
+cdsw@1bu83ab6dlj8xhml:~$ git add docs
+cdsw@1bu83ab6dlj8xhml:~$ git status
+On branch v0.1
+Your branch is up to date with 'origin/v0.1'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs/CML_Demo_Documentation.ipynb
+        new file:   docs/ml_lifecycle.png
+        new file:   docs/ml_lifecycle_vanilla.png
+        new file:   docs/setup.txt
+
+cdsw@1bu83ab6dlj8xhml:~$ git commit -m 'Documentation started'
+[v0.1 3025d6f] Documentation started
+ 4 files changed, 281 insertions(+)
+ create mode 100644 docs/CML_Demo_Documentation.ipynb
+ create mode 100644 docs/ml_lifecycle.png
+ create mode 100644 docs/ml_lifecycle_vanilla.png
+ create mode 100644 docs/setup.txt
+cdsw@1bu83ab6dlj8xhml:~$ git push origin v0.1
+Warning: Permanently added the ECDSA host key for IP address '140.82.114.3' to the list of known hosts.
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 159.72 KiB | 12.29 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:sivanvad/ml-projects.git
+   757d3fa..3025d6f  v0.1 -> v0.1
+cdsw@1bu83ab6dlj8xhml:~$ 
