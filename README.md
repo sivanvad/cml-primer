@@ -1,4 +1,4 @@
-# CML Primer
+# A Primer to CML & MLOps
 
 ## Introduction
 
